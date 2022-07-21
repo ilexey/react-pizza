@@ -8,9 +8,7 @@ function App() {
       <div className="content">
         <div className="container">
           <div className="content__top">
-            <Categories items={['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые',]}
-              onClickItem={(name) => alert(name)}
-            />
+            <Categories items={['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые',]}/>
             <div className="sort">
               <div className="sort__label">
                 <svg
