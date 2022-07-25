@@ -1,11 +1,14 @@
 import logoSvg from '../assets/img/pizza-logo.svg';
 import { Button } from './';
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const router = useNavigate();
+
   return (
     <div className="header">
       <div className="container">
-        <div className="header__logo">
+        <div className="header__logo" onClick={() => router('/')}>
           <img width="38" src={logoSvg} alt="Pizza logo" />
           <div>
             <h1>React Pizza</h1>
@@ -13,7 +16,7 @@ function Header() {
           </div>
         </div>
         <div className="header__cart">
-          <Button  className="button--cart">
+          <Button  className="button--cart" onClick={() => router('/cart')}>
             <span>520 ₽</span>
             <div className="button__delimiter"></div>
             <svg
